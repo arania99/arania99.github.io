@@ -1,0 +1,302 @@
+:root{
+  --beige: #EDE3D0;
+  --white: #FBF8F2;
+  --ink: #2E2418;
+  --ink-soft: #5B4E3A;
+  --clay: #A6512E;
+  --moss: #5C6B3C;
+  --thread: #8C7355;
+  --line: rgba(46,36,24,0.12);
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin:0;
+  font-family:"Work Sans", sans-serif;
+  color: var(--ink);
+  background: var(--beige);
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  color:inherit;
+}
+
+/* HEADER */
+
+header.site-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1.3rem 2rem;
+  border-bottom:1px solid var(--line);
+  background:var(--beige);
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+
+.brand{
+  font-family:"Fraunces", serif;
+  font-size:1.05rem;
+  font-weight:520;
+  text-decoration:none;
+}
+
+nav.main-nav{
+  display:flex;
+  gap:1.6rem;
+  flex-wrap:wrap;
+}
+
+nav.main-nav a{
+  font-size:0.82rem;
+  color:var(--ink-soft);
+  text-decoration:none;
+}
+
+nav.main-nav a:hover,
+nav.main-nav a.active{
+  color:var(--ink);
+}
+
+/* SECTIONS */
+
+section{
+  padding:4rem 2rem;
+  position:relative;
+}
+
+.wrap{
+  max-width:780px;
+  margin:0 auto;
+}
+
+/* HERO */
+
+.hero{
+  background:var(--beige);
+  padding-top:4.2rem;
+  padding-bottom:3.6rem;
+}
+
+.eyebrow{
+  font-size:0.72rem;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--moss);
+  font-weight:500;
+  display:flex;
+  align-items:center;
+  gap:0.6em;
+  margin-bottom:1.5rem;
+}
+
+.eyebrow::before{
+  content:"";
+  width:1.6em;
+  height:1px;
+  background:var(--moss);
+}
+
+h1{
+  font-family:"Fraunces", serif;
+  font-weight:520;
+  font-style:italic;
+  font-size:clamp(2rem, 4vw, 3rem);
+  line-height:1.16;
+  margin:0 0 1.2rem;
+  max-width:15ch;
+}
+
+h1 em{
+  font-style:normal;
+  color:var(--clay);
+}
+
+h2{
+  font-family:"Fraunces", serif;
+  font-weight:520;
+  font-size:clamp(1.4rem, 2.4vw, 1.9rem);
+  margin:0 0 1rem;
+}
+
+p.lead{
+  font-size:1.03rem;
+  color:var(--ink-soft);
+  max-width:32rem;
+  line-height:1.7;
+  margin:0 0 2rem;
+}
+
+p{
+  color:var(--ink-soft);
+  line-height:1.65;
+}
+
+/* DECORATIVE STITCH */
+
+.stitch{
+  width:190px;
+  height:18px;
+  margin:0 0 2rem;
+}
+
+.stitch path{
+  stroke:var(--thread);
+  stroke-width:1.5;
+  fill:none;
+  stroke-dasharray:6 6;
+  stroke-linecap:round;
+}
+
+/* BUTTONS */
+
+.cta{
+  display:inline-flex;
+  align-items:center;
+  gap:0.6em;
+  background:var(--clay);
+  color:#F7EFE2;
+  padding:0.85rem 1.6rem;
+  border-radius:2px;
+  font-size:0.9rem;
+  text-decoration:none;
+  font-weight:500;
+}
+
+.cta.ghost{
+  background:none;
+  color:var(--ink);
+  border:1px solid var(--line);
+  margin-left:0.8rem;
+}
+
+/* SECTIONS */
+
+.white-section{
+  background:var(--white);
+  text-align:center;
+}
+
+.white-section .eyebrow{
+  justify-content:center;
+}
+
+.white-section .eyebrow::before{
+  display:none;
+}
+
+.white-section p{
+  max-width:32rem;
+  margin:0 auto;
+}
+
+.beige-section{
+  background:var(--beige);
+}
+
+/* CARDS */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--line);
+  margin-top:1.6rem;
+}
+
+.card{
+  background:var(--beige);
+  padding:1.8rem 1.5rem;
+  text-decoration:none;
+  color:inherit;
+  transition:background .2s ease;
+}
+
+.card:hover{
+  background:var(--white);
+}
+
+.card .n{
+  font-size:0.7rem;
+  color:var(--clay);
+  letter-spacing:0.08em;
+}
+
+.card h3{
+  font-family:"Fraunces", serif;
+  font-size:1.05rem;
+  font-weight:520;
+  margin:0.6rem 0 0.5rem;
+}
+
+.card p{
+  font-size:0.88rem;
+  margin:0;
+}
+
+/* FOOTER */
+
+footer.site-footer{
+  border-top:1px solid var(--line);
+  padding:2.2rem 2rem;
+  background:var(--white);
+  text-align:center;
+}
+
+footer.site-footer p{
+  margin:0;
+  font-size:0.8rem;
+}
+
+/* BUILDING / PLACEHOLDER */
+
+.building{
+  min-height:50vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+/* MOBILE */
+
+@media (max-width:700px){
+
+  header.site-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:1rem;
+    padding:1.1rem 1.3rem;
+  }
+
+  nav.main-nav{
+    gap:0.8rem 1.1rem;
+  }
+
+  nav.main-nav a{
+    font-size:0.78rem;
+  }
+
+  section{
+    padding:3rem 1.3rem;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .cta.ghost{
+    margin-left:0;
+    margin-top:0.7rem;
+  }
+
+}
