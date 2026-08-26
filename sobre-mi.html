@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre mí — Itziar Castillo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,380;0,9..144,520;0,9..144,600;1,9..144,460&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="brand">Itziar Castillo</a>
+  <nav class="main-nav">
+    <a href="index.html">Inicio</a>
+    <a href="tecnica-alexander.html">Técnica Alexander</a>
+    <a href="gestalt.html">Gestalt</a>
+    <a href="sobre-mi.html">Sobre mí</a>
+    <a href="contacto.html">Contacto / Sesiones</a>
+  </nav>
+</header>
+
+<section class="building">
+  <div class="wrap">
+    <p class="eyebrow" style="justify-content:center;">Sobre mí</p>
+    <h2>Esta página está en construcción</h2>
+    <p>Aquí reuniremos mi recorrido, mi formación y la manera en que integro la Técnica Alexander, la Gestalt y otros aprendizajes en mi forma de trabajar.</p>
+    <p style="margin-top:1.6rem;"><a href="index.html" class="cta">Volver al inicio</a></p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Itziar Castillo Otaola</p>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('nav-sobre-mi').classList.add('active');
+</script>
+</body>
+</html>
